@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: smart resume analyzer
+  datasource:
+    url: jdbc:mysql://localhost:3306/smart_resume?useSSL=false&serverTimezone=UTC
+    username: root
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update   # dev only
+    show-sql: true
+
+server:
+  port: 8080
+
+file:
+  upload-dir: uploads   # where resumes will be stored
+
+security:
+  jwt:
+    secret: "gSjFbnNgreMrougNB85sBDg7Idk/qfUjROCPmSZvHGk="
+    expiration-ms: 86400000   # 1 day
